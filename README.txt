@@ -1,5 +1,3 @@
-
-
 Steps 
 1. Import the Data
 2. Clean the Data
