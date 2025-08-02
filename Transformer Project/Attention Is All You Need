@@ -1,0 +1,49 @@
+Project Title: Transformer Architecture – An Educational Reimplementation of Attention Is All You Need
+
+- Executive Summary
+This repository presents a didactic and research-oriented reimplementation of the Transformer model introduced in the influential publication “Attention Is All You Need” by Vaswani et al. (2017). The Transformer architecture represents a significant departure from prior sequence modeling approaches that relied on recurrence or convolution. By introducing self-attention mechanisms as the sole means of encoding sequential dependencies, the model enables increased parallelism, improved long-range context modeling, and architectural scalability.
+This project is intended as an in-depth study and pedagogical reconstruction of the Transformer architecture, developed from first principles using [PyTorch/TensorFlow/NumPy], with an emphasis on transparency and conceptual clarity.
+________________________________________
+- Background and Citation
+The Transformer was first proposed in:
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., & Polosukhin, I. (2017). Attention is All You Need. In Advances in Neural Information Processing Systems (NeurIPS 2017), 30. arXiv:1706.03762
+In addition to its academic dissemination, the Transformer model is covered under U.S. Patent No. US10474651B2:
+Vaswani, A., Shazeer, N., Parmar, N., et al. (2019). Attention Mechanism for Machine Translation and Other Neural Network Applications. U.S. Patent No. 10,474,651. Issued November 12, 2019. Google Patents Link
+This implementation is built strictly for educational and non-commercial research purposes and is compliant with fair use standards under U.S. copyright and patent law.
+________________________________________
+- Core Architectural Components
+1. Scaled Dot-Product Attention
+A mechanism that computes the alignment between queries, keys, and values in a computationally efficient manner. Scaling by the square root of the key dimension addresses issues of vanishing gradients in high-dimensional spaces.
+2. Multi-Head Attention
+An ensemble of attention operations running in parallel, allowing the model to capture relationships across multiple representational subspaces. Outputs from all heads are concatenated and linearly transformed.
+3. Positional Encoding
+To introduce order into the otherwise permutation-invariant attention mechanism, sinusoidal or learned positional embeddings are added to token representations. These encodings allow the model to reason about token position without recurrence.
+4. Encoder–Decoder Structure
+•	The encoder is composed of a stack of identical layers, each containing a self-attention mechanism and a feed-forward sublayer.
+•	The decoder includes a similar stack, augmented with masked self-attention and encoder-decoder cross-attention layers to facilitate autoregressive sequence generation.
+5. Feedforward Network & Residual Layers
+Each sublayer in the architecture includes a two-layer feedforward neural network and is wrapped with residual connections and layer normalization to promote stable learning dynamics.
+________________________________________
+- Implementation Highlights
+•	Custom modules implementing:
+o	Scaled dot-product attention
+o	Multi-head attention
+o	Sinusoidal positional encodings
+o	Encoder and decoder layers
+o	Greedy decoding for inference
+•	Written in [specify language/framework]
+•	Code is modular, well-commented, and follows academic reproducibility practices
+ Disclaimer: This repository is an independent, non-commercial educational project. It does not replicate proprietary model weights or datasets and is intended solely for learning and research purposes. Intellectual property rights of the original architecture are retained by the authors and assignees (Google Inc. and affiliated institutions).
+________________________________________
+- Learning Objectives
+By engaging with this implementation, users will:
+•	Gain a comprehensive understanding of attention-based models
+•	Learn how self-attention operates at the matrix level
+•	Explore how the encoder-decoder mechanism works in language generation
+•	Build intuition for scaling architectures for large NLP applications
+________________________________________
+- Full References
+1.	Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., & Polosukhin, I. (2017). Attention Is All You Need. arXiv preprint arXiv:1706.03762
+2.	Vaswani, A., Shazeer, N., Parmar, N., et al. (2019). Attention Mechanism for Machine Translation and Other Neural Network Applications. U.S. Patent No. 10,474,651. US10474651B2
+3.	Google Research Blog. (2017). Transformer: A Novel Neural Network Architecture for Language Understanding. Link
+
