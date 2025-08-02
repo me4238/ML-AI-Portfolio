@@ -1,0 +1,30 @@
+Kubernetes
+
+Kubernetes, often abbreviated as K8s, is an open-source container orchestration platform designed to automate the deployment, scaling, and management of containerized applications. Originally developed by Google and now maintained by the Cloud Native Computing Foundation (CNCF), Kubernetes has become the industry standard for container orchestration.
+At its core, Kubernetes abstracts the underlying infrastructure—whether on-premises or cloud—and provides a unified API to manage application workloads. It groups containers into logical units called Pods, which are the smallest deployable units. Kubernetes manages Pods across clusters of machines, automatically handling scheduling, load balancing, scaling, and self-healing.
+Key features include:
+•	Automated rollouts and rollbacks: Kubernetes can progressively deploy changes or revert if issues arise.
+•	Self-healing: It automatically restarts failed containers or replaces unhealthy nodes.
+•	Horizontal scaling: Automatically adjusts the number of running instances based on demand.
+•	Service discovery and load balancing: Internal networking and DNS to route requests efficiently.
+•	Secret and configuration management: Securely manage sensitive information and application configuration.
+By simplifying complex container lifecycle management, Kubernetes enables organizations to build reliable, scalable, and portable cloud-native applications.
+________________________________________
+
+Kubeflow
+
+Kubeflow is an open-source machine learning toolkit built on top of Kubernetes, aimed at simplifying the deployment and management of scalable ML workflows. It empowers data scientists and ML engineers to develop, orchestrate, and deploy end-to-end machine learning pipelines in a cloud-native environment.
+Kubeflow leverages Kubernetes' scalability and flexibility to manage complex ML workflows that typically involve data preprocessing, training, hyperparameter tuning, model validation, and deployment. It provides:
+•	Pipeline orchestration: Define and execute reusable, scalable ML workflows using Kubeflow Pipelines.
+•	Distributed training: Seamlessly run distributed training jobs using popular ML frameworks like TensorFlow, PyTorch, and MXNet.
+•	Hyperparameter tuning: Automate hyperparameter optimization with Katib, Kubeflow’s built-in tuning system.
+•	Model serving: Deploy trained models as scalable, production-ready services.
+•	Multi-framework support: Flexibility to use different ML tools within a single platform.
+•	Centralized metadata tracking: Track datasets, experiments, and model versions for reproducibility.
+Kubeflow abstracts much of the underlying Kubernetes complexity, allowing ML practitioners to focus more on model development and less on infrastructure management. It brings DevOps best practices to machine learning, fostering collaboration and continuous delivery in ML projects.
+________________________________________
+
+Summary
+•	Kubernetes is the leading platform for orchestrating containerized applications, providing automation and scalability across diverse infrastructures.
+•	Kubeflow extends Kubernetes capabilities specifically for machine learning, enabling streamlined development, training, and deployment of ML models in production environments.
+
